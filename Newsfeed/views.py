@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect,HttpResponseRedirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
-from .models import Post,Comment,PostFile
-from .forms import PostForm,CommentForm,FileModelForm
+from .models import Post,Comment
+from .forms import PostForm,CommentForm
 from django.urls import reverse_lazy,reverse
 from django.views.generic.detail import DetailView
 from django.views.generic import UpdateView,ListView,DeleteView
@@ -263,15 +263,6 @@ def otherprofile(request,username):
     return render (request,'loginapp/profile.html',locals())
 
 
-def addphoto(request,id):
-    post=Post.objects.get(id=id)
-    if request.method=='POST':
-        form=FileModelForm(request.POST,request.FILES)
-        if form.is_valid():
-            image=form.cleaned_data['image']
-            obj=PostFile(image=image,post=post)
-            obj.save()
-            return redirect('newsfeed:post_list')
         
 from notifications.models import Notification
 def notification(request):
