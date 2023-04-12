@@ -4,9 +4,8 @@ from django.contrib.auth.models import User
 from datetime import datetime
 from django.template.defaultfilters import slugify
 from django.urls import reverse
-import pytz
 
-from multiselectfield import MultiSelectField
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200)

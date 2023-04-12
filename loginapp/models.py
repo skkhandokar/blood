@@ -2,7 +2,6 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils.text import slugify
 from django.urls import reverse
-from autoslug import AutoSlugField
 # Create your models here.
 from PIL import Image 
 from django.contrib.auth.models import AbstractUser

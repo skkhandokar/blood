@@ -47,9 +47,7 @@ INSTALLED_APPS = [
     'resetpassword',
     'notifications',
     'diseasepredictionApp',
-    'autoslug',
-    'crispy_forms',
-    'rest_framework',
+
     'widget_tweaks',
     'django.contrib.humanize',
     
