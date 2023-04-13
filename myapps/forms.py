@@ -1,7 +1,7 @@
 from django import forms
 from django.core import validators
 from depend.models import Country, State, District
-from phonenumber_field.modelfields import PhoneNumberField
+
 
 from django import forms
 from .models import Donors_in_Site

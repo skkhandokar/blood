@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapps',
-    'phonenumber_field',
+  
     'blood_search',
     'donorslist',
     'loginapp',

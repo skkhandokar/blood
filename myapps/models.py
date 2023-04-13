@@ -1,6 +1,6 @@
 from django.db import models
 from datetime import datetime,date
-from phonenumber_field.modelfields import PhoneNumberField
+
 from django.template.defaultfilters import slugify
 from django.urls import reverse
 # Create your models here.
@@ -41,7 +41,7 @@ class Bloods_Group(models.Model):
 class Donors_in_Site(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE,null=True)
     name = models.CharField(max_length=124,default='username',blank=False)
-    phone=PhoneNumberField(null=True)
+    phone=models.CharField(max_length=14,null=True,blank=True) 
  
     blood = models.CharField(max_length=124,null=True,blank=False)   
     blood_donate_times=models.IntegerField(default=0,null=True,blank=True)
